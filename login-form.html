@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        min-height: 100vh;
+        grid-template-areas:
+          ". . ."
+          ". form ."
+          ". . .";
+        background-color: #f2e9e4;
+      }
+      form {
+        grid-area: form;
+        width: 960px;
+        background-color: white;
+        padding: 2em;
+        border-radius: 10px;
+      }
+      form > div {
+        grid-template-columns: 4fr 6fr;
+        display: grid;
+      }
+      form > div input {
+        justify-self: start;
+      }
+      form > div label {
+        align-self: center;
+        justify-self: center;
+      }
+      form button {
+        grid-column: 2/2;
+        justify-self: start;
+      }
+      input {
+        padding: 10px;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>LOGIN PAGE</h1>
+      <div>
+        <label>Username</label>
+        <input type="text" name="username" />
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="text" name="username" />
+      </div>
+      <div>
+        <button>Login</button>
+      </div>
+    </form>
+  </body>
+</html>
