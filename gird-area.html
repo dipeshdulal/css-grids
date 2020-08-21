@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: grid;
+        min-height: 100vh;
+        grid-template-areas:
+          "header header header  header"
+          "...... body   sidebar ......"
+          "footer footer footer  footer";
+      }
+      .header {
+        background: #22223b;
+        grid-area: header;
+      }
+      .footer {
+        background: #4a4e69;
+        grid-area: footer;
+      }
+      .sidebar {
+        background: #9a8c98;
+        grid-area: sidebar;
+      }
+      .body {
+        background: #c9ada7;
+        grid-area: body;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">HEADER</div>
+    <div class="body">BODY</div>
+    <div class="sidebar">SIDEBAR</div>
+    <div class="footer">FOOTER</div>
+  </body>
+</html>
