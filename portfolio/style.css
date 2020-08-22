@@ -8,37 +8,65 @@
 :root {
   --color-secondary: #f3f6fd;
   --color-black: #2d2e31;
+  --color-light-gray: #a3a6ad;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   background: var(--color-secondary);
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: 90px 6fr 4fr;
+  grid-template-rows: 80px 1fr;
+  grid-template-areas:
+    "header header   header"
+    "side   projects message";
+}
+
+nav {
+  grid-area: header;
+}
+
+.sidemenu {
+  grid-area: side;
+}
+.projects {
+  grid-area: projects;
+  background-color: white;
+  border-radius: 30px;
+}
+.client-messages {
+  grid-area: message;
 }
 
 /* NAVBAR DESIGN */
 nav {
   display: grid;
-  grid-template-columns: 1fr 3fr 6fr 2fr;
-  align-items: center;
-  height: 57px;
+  grid-template-columns: 90px 2fr 8fr 3fr;
+  justify-items: center;
   padding: 10px 0;
 }
 
 nav .left-menu a {
   font-size: 27px;
   color: var(--color-black);
-  padding: 10px;
+}
+nav .left-menu {
+  justify-items: center;
+}
+
+nav .heading {
+  font-size: 2rem;
 }
 
 nav .search-box {
-  justify-self: start;
   position: relative;
 }
 nav input {
   padding: 15px 20px 15px 40px;
   border-radius: 20px;
   border: none;
+  min-width: 25em;
 }
 nav input:focus {
   border: none;
@@ -75,3 +103,46 @@ nav .right .icons a {
   color: var(--color-black);
 }
 /* NAVBAR DESIGN [END] */
+
+/* SIDEBAR MENU ICONS */
+.sidemenu a {
+  color: var(--color-black);
+  font-size: 25px;
+  height: 57px;
+  width: 57px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidemenu a.active {
+  background-color: var(--color-black);
+  color: white;
+}
+.sidemenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+/* SIDEBAR MENU ICONS [END] */
+
+/* CLIENT MESSAGES */
+.client-messages .cm-heading {
+  display: grid;
+  padding-top: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  grid-template-columns: 1fr 50px;
+  border-bottom: 1px solid var(--color-light-gray);
+  padding-bottom: 10px;
+}
+.client-messages .cm-heading > div {
+  display: flex;
+  justify-content: space-around;
+}
+.client-messages .cm-heading > div a {
+  color: var(--color-light-gray);
+}
+/* CLIENT MESSAGES [END] */
