@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-secondary: #f3f6fd;
+  --color-black: #2d2e31;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--color-secondary);
+  min-height: 100vh;
+}
+
+/* NAVBAR DESIGN */
+nav {
+  display: grid;
+  grid-template-columns: 1fr 3fr 6fr 2fr;
+  align-items: center;
+  height: 57px;
+  padding: 10px 0;
+}
+
+nav .left-menu a {
+  font-size: 27px;
+  color: var(--color-black);
+  padding: 10px;
+}
+
+nav .search-box {
+  justify-self: start;
+  position: relative;
+}
+nav input {
+  padding: 15px 20px 15px 40px;
+  border-radius: 20px;
+  border: none;
+}
+nav input:focus {
+  border: none;
+  outline-width: 0;
+}
+nav .search-box i {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+}
+nav .user {
+  display: flex;
+  align-items: center;
+}
+nav .user img {
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+nav .right {
+  margin-right: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+nav .right .icons {
+  display: flex;
+  justify-content: space-around;
+  border-right: 1px solid #ccc;
+  margin-right: 10px;
+}
+nav .right .icons a {
+  color: var(--color-black);
+}
+/* NAVBAR DESIGN [END] */
