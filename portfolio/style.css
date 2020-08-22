@@ -8,6 +8,9 @@
 :root {
   --color-secondary: #f3f6fd;
   --color-black: #2d2e31;
+  --color-orange: #fee4cb;
+  --color-red: #ffd3e2;
+  --color-green: #baf3d2;
   --color-light-gray: #a3a6ad;
 }
 
@@ -201,3 +204,157 @@ nav .right .icons a {
   object-fit: cover;
 }
 /* CLIENT MESSAGES [END] */
+
+/* PROJECTS */
+.projects {
+  padding: 2em;
+}
+.projects .projects-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.projects .projects-heading h4 {
+  color: var(--color-light-gray);
+}
+.projects .stats-heading {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+}
+.projects .stats-heading .stats-card-wrapper {
+  display: grid;
+  padding-top: 1em;
+  grid-template-columns: repeat(4, 1fr);
+}
+.projects .stats-heading .stats-card-wrapper h3 {
+  font-size: 1.4rem;
+}
+.projects .stats-heading .stats-card-wrapper h4 {
+  font-size: 0.9rem;
+  color: var(--color-light-gray);
+}
+.projects .stats-heading .icon {
+  text-align: right;
+  font-size: 1.3em;
+}
+.projects .stats-heading .icon a {
+  color: var(--color-black);
+  padding: 0.3em;
+  display: inline-block;
+}
+
+/* BIG CARD */
+.big-card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  padding: 2em 0;
+}
+.big-card-wrapper .big-card {
+  background-color: white;
+  padding: 2em;
+  border-radius: 2em;
+  -webkit-box-shadow: 0px 26px 98px -59px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 26px 98px -59px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 26px 98px -59px rgba(0, 0, 0, 0.75);
+}
+.big-card {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  grid-template-areas:
+    "date     ellipsis"
+    "heading  heading "
+    "subhead  subhead "
+    "progress ."
+    "progbar  progbar"
+    ".        percentage"
+    "img      tag";
+}
+.big-card .date {
+  grid-area: date;
+  font-size: 0.9em;
+}
+.big-card i.fa-ellipsis-v {
+  grid-area: ellipsis;
+  text-align: right;
+}
+.big-card h3 {
+  margin: 0.7em 0 0 0;
+  line-height: 30px;
+  grid-area: heading;
+  text-align: center;
+}
+.big-card h4 {
+  grid-area: subhead;
+  text-align: center;
+  font-weight: normal;
+  font-size: 0.7em;
+}
+.big-card .progress {
+  grid-area: progress;
+  font-size: 0.9em;
+}
+.big-card .outer {
+  grid-area: progbar;
+  height: 5px;
+  margin: 0.7em 0;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
+.big-card .outer .inner {
+  height: 5px;
+  width: 20%;
+  border-radius: 3px;
+  background-color: aqua;
+}
+.big-card .percentage {
+  grid-area: percentage;
+  text-align: right;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.big-card .images {
+  grid-area: img;
+}
+.big-card .images img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: -15px;
+  cursor: pointer;
+  border: 2px solid white;
+}
+.big-card .images img:hover {
+  z-index: 2;
+  transform: scale(1.1);
+}
+.big-card .images img:first-child {
+  margin-left: 0;
+}
+
+.big-card p.tag {
+  margin-top: 1em 0;
+  grid-area: tag;
+  background: #ddf5fb;
+  color: #77cbd2;
+  display: flex;
+  border-radius: 1em;
+  text-align: center;
+  font-weight: bold;
+  justify-content: center;
+  font-size: 0.8em;
+  align-self: center;
+  align-items: center;
+  padding: 0.5em 0;
+}
+.big-card.orange {
+  background: var(--color-orange);
+}
+.big-card.red {
+  background: var(--color-red);
+}
+.big-card.green {
+  background: var(--color-green);
+}
+/* BIG CARD [end] */
