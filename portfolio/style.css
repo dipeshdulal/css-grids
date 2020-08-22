@@ -41,7 +41,10 @@ nav {
 
 /* NAVBAR DESIGN */
 nav {
+  position: sticky;
+  top: 0;
   display: grid;
+  background: var(--color-secondary);
   grid-template-columns: 90px 2fr 8fr 3fr;
   justify-items: center;
   padding: 10px 0;
@@ -120,10 +123,12 @@ nav .right .icons a {
   color: white;
 }
 .sidemenu {
+  position: sticky;
+  top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  height: 100vh;
 }
 
 /* SIDEBAR MENU ICONS [END] */
@@ -137,6 +142,9 @@ nav .right .icons a {
   grid-template-columns: 1fr 50px;
   border-bottom: 1px solid var(--color-light-gray);
   padding-bottom: 10px;
+  position: sticky;
+  top: 67px;
+  background-color: var(--color-secondary);
 }
 .client-messages .cm-heading > div {
   display: flex;
@@ -144,5 +152,52 @@ nav .right .icons a {
 }
 .client-messages .cm-heading > div a {
   color: var(--color-light-gray);
+}
+.client-messages .message {
+  display: grid;
+  grid-template-columns: 70px 1fr 40px;
+  grid-template-areas:
+    "img head star"
+    "img text text"
+    ".   date date";
+  padding: 2em 1em;
+  align-items: center;
+  margin: 10px;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+.client-messages .message h3 {
+  grid-area: head;
+}
+.client-messages .message i.fa-star {
+  grid-area: star;
+  text-align: right;
+  color: var(--color-light-gray);
+}
+.client-messages .message:hover {
+  background-color: white;
+  -webkit-box-shadow: 0px 26px 98px -59px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 26px 98px -59px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 26px 98px -59px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+}
+.client-messages .message p {
+  font-size: 0.9rem;
+  line-height: 27px;
+}
+.client-messages .message p:first-child {
+  grid-area: text;
+}
+.client-messages .message p:last-child {
+  grid-area: date;
+  text-align: right;
+}
+.client-messages .message img {
+  grid-area: img;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 /* CLIENT MESSAGES [END] */
