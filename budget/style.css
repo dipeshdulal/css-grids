@@ -39,6 +39,16 @@ h6 {
 }
 
 body {
+  background: #ffd4cb;
+}
+
+.wrapper {
+  margin: 40px;
+  border-radius: 20px;
+  -webkit-box-shadow: var(--normal-box-shadow);
+  -moz-box-shadow: var(--normal-box-shadow);
+  box-shadow: var(--normal-box-shadow);
+  overflow: hidden;
   background: var(--color-secondary);
   display: grid;
   grid-template-columns: 6fr 2fr;
