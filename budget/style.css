@@ -21,6 +21,7 @@
   --heading-height: 80px;
   --normal-padding: 1.5em;
   --normal-box-shadow: -2px 6px 100px -63px rgba(112, 112, 112, 0.39);
+  --color-green: #15ac7f;
 }
 
 p {
@@ -103,7 +104,7 @@ section.body {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "wallet calendar";
 }
-.wallet-heading .wallet {
+.wallet {
   grid-area: wallet;
   display: grid;
   grid-template-columns: 65px 1fr;
@@ -112,15 +113,16 @@ section.body {
     "icon heading"
     "icon paragraph";
 }
-.wallet-heading .wallet i {
+.wallet i {
   grid-area: icon;
   color: var(--color-orange);
 }
-.wallet-heading .wallet h3 {
+.wallet h3 {
   grid-area: heading;
   color: var(--color-dark-blue);
+  align-self: center;
 }
-.wallet-heading .wallet p {
+.wallet p {
   grid-area: paragraph;
   font-weight: bold;
   color: var(--color-light-black);
@@ -140,7 +142,7 @@ section.body {
   grid-template-columns: 30px 1fr 20px;
   color: var(--color-light-black);
 }
-.wallet-heading .dropdown i.fa-caret-down {
+.dropdown i.fa-caret-down {
   justify-self: flex-end;
 }
 
@@ -175,4 +177,81 @@ section.sidebar .nav-line img {
   margin: 10px;
   margin-left: 20px;
   object-fit: cover;
+}
+
+.categories,
+.wallets {
+  display: grid;
+  padding: var(--normal-padding);
+  grid-template-rows: 35px 1fr;
+  grid-template-areas:
+    "heading plus"
+    "wallet-wr  wallet-wr";
+}
+
+.categories > i,
+.wallets > i {
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed var(--color-light-black);
+}
+
+.categories .wallet-wrapper,
+.wallets .wallet-wrapper {
+  grid-area: wallet-wr;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.wallet-wrapper .wallet {
+  margin: 0.6em 0;
+}
+.wallet-wrapper .wallet h3 {
+  font-size: 16px;
+}
+
+.categories > h3,
+.wallets > h3 {
+  grid-area: heading;
+}
+.categories > i,
+.wallets > i {
+  justify-self: end;
+  grid-area: plus;
+}
+
+.categories h3,
+.wallets h3 {
+  color: var(--color-dark-black);
+}
+
+.wallet-wrapper .wallet i {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+i.purple {
+  background: var(--color-purple);
+}
+i.orange {
+  background: var(--color-orange);
+}
+i.green {
+  background: var(--color-green);
+}
+i.yellow {
+  background: var(--color-yellow);
+}
+i.red {
+  background: var(--color-light-red);
 }
