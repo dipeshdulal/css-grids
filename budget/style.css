@@ -147,6 +147,9 @@ section.body {
 }
 
 section.sidebar {
+  height: 100vh;
+  position: sticky;
+  top: 0;
   grid-area: sidebar;
   background-color: white;
   -webkit-box-shadow: var(--normal-box-shadow);
@@ -254,4 +257,68 @@ i.yellow {
 }
 i.red {
   background: var(--color-light-red);
+}
+i.blue {
+  background: var(--color-light-blue);
+  color: var(--color-dark-blue) !important;
+}
+
+/* WALLET-DATASET */
+.wallet-dataset {
+  display: grid;
+  grid-template-columns: 70px 1fr 80px 60px 60px;
+  grid-template-areas:
+    "icon heading dollar delete cross"
+    "icon sub     dollar delete cross";
+  align-items: center;
+  padding: 0.8em 1.5em;
+  background-color: white;
+  margin: 1.3em 0;
+  border-radius: 15px;
+  -webkit-box-shadow: var(--normal-box-shadow);
+  -moz-box-shadow: var(--normal-box-shadow);
+  box-shadow: var(--normal-box-shadow);
+}
+.wallet-dataset i {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+}
+.wallet-dataset i.icon {
+  grid-area: icon;
+}
+.wallet-dataset h3 {
+  grid-area: heading;
+}
+.wallet-dataset p.date {
+  grid-area: sub;
+  color: var(--color-light-black);
+}
+.wallet-dataset p.money {
+  grid-area: dollar;
+  font-weight: bold;
+}
+.wallet-dataset i.fa-trash {
+  grid-area: delete;
+}
+.wallet-dataset i.fa-times {
+  grid-area: cross;
+}
+
+.wallet-data-heading {
+  display: grid;
+  grid-template-columns: 1fr 300px 200px;
+  padding-top: 1.8em;
+}
+.wallet-data-heading h2 {
+  font-size: 1.3em;
+}
+.wallet-data-heading p {
+  text-align: right;
+  font-weight: bold;
+  color: var(--color-light-black);
 }
