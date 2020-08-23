@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-secondary: #f1f2f7;
+  --color-orange: #fe9669;
+  --color-purple: #6631c1;
+  --color-light-red: #eb9f9e;
+  --color-yellow: #e5b773;
+  --color-light-blue: #dff4fb;
+  --primary-font: "Alata", sans-serif;
+  --secondary-font: "Open Sans", sans-serif;
+}
+
+p {
+  font-family: var(--secondary-font);
+  line-height: 27px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary-font);
+}
