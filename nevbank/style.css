@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,400&display=swap');
 
 * {
   margin: 0;
@@ -14,7 +15,7 @@
   --color-black: #1f1f1f;
   --color-black-light: #303030;
 
-  --primary-font-family: "Mukta", sans-serif;
+  --primary-font-family: 'Josefin Sans', sans-serif;
   --secondary-font-family: "Roboto", sans-serif;
 }
 
@@ -44,7 +45,7 @@ nav a {
   color: var(--color-gray-dark);
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 nav a.active {
@@ -57,7 +58,7 @@ nav {
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: 200px 2fr 1fr 150px 40px;
+  grid-template-columns: 200px 2fr 1fr 150px 100px;
   height: 5em;
 }
 nav ul li {
