@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Roboto&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,400&display=swap");
 
 * {
   margin: 0;
@@ -15,7 +15,7 @@
   --color-black: #1f1f1f;
   --color-black-light: #303030;
 
-  --primary-font-family: 'Josefin Sans', sans-serif;
+  --primary-font-family: "Josefin Sans", sans-serif;
   --secondary-font-family: "Roboto", sans-serif;
 }
 
@@ -72,3 +72,81 @@ nav ul {
   list-style: none;
 }
 /* NAV [end] */
+
+/* CARD */
+.card {
+  -webkit-box-shadow: -26px 36px 118px -64px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: -26px 36px 118px -64px rgba(0, 0, 0, 0.31);
+  box-shadow: -26px 36px 118px -64px rgba(0, 0, 0, 0.31);
+  background-color: white;
+  border-radius: 1em;
+  padding: 2em;
+  display: grid;
+  align-items: center;
+  grid-template-areas:
+    "sub-left sub-right"
+    "heading  stats"
+    "account  stats"
+    "buttons  .";
+}
+.card__subheading {
+  font-size: 0.9rem;
+  color: var(--color-gray-dark);
+  padding: 1em 0;
+}
+.card__subheading--left {
+  grid-area: sub-left;
+}
+.card__subheading--right {
+  grid-area: sub-right;
+  text-align: right;
+}
+.card__heading {
+  grid-area: heading;
+  margin: 0;
+}
+.card__account {
+  grid-area: account;
+  font-size: 1.2rem;
+  padding: 0.2em 0;
+  color: var(--color-gray-dark);
+}
+.card__stat {
+  grid-area: stats;
+  font-size: 2em;
+  text-align: right;
+}
+.card__dollar {
+  color: var(--color-gray-dark);
+}
+.card__btns {
+  grid-area: buttons;
+  padding: 1.2em 0;
+}
+a.card__btn {
+  display: inline-block;
+  padding: 0.9em 1.3em;
+  font-family: var(--primary-font-family);
+  border-radius: 0.6em;
+  margin: 0 0.5em;
+}
+a.card__btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+  margin-left: -0.5em;
+}
+a.card__btn--secondary {
+  background-color: var(--color-gray);
+}
+.card--primary {
+  background: var(--color-primary);
+  color: white;
+}
+/* CARD [end] */
+
+.top-card {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  grid-gap: 2em;
+  padding: 2em;
+}
