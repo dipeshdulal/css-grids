@@ -3,12 +3,16 @@
 * {
   margin: 0;
   padding: 0;
+  transition: all 300ms ease;
 }
 
 :root {
   --color-primary: #088273;
   --color-secondary: #f2f3f8;
   --color-gray: #f1f2f7;
+  --color-gray-dark: rgb(134, 134, 134);
+  --color-black: #1f1f1f;
+  --color-black-light: #303030;
 
   --primary-font-family: "Mukta", sans-serif;
   --secondary-font-family: "Roboto", sans-serif;
@@ -28,3 +32,42 @@ h5,
 h6 {
   font-family: var(--primary-font-family);
 }
+
+h3 {
+  font-size: 1.5em;
+}
+
+/* NAV */
+
+nav a {
+  font-family: var(--primary-font-family);
+  color: var(--color-gray-dark);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+nav a.active {
+  color: var(--color-black);
+}
+nav a:hover {
+  color: var(--color-black-light);
+}
+nav {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 200px 2fr 1fr 150px 40px;
+  height: 5em;
+}
+nav ul li {
+  display: inline-block;
+  padding: 0 1em;
+}
+nav i {
+  color: var(--color-black);
+}
+nav ul {
+  list-style: none;
+}
+/* NAV [end] */
