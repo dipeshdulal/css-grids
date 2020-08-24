@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #088273;
+  --color-secondary: #f2f3f8;
+  --color-gray: #f1f2f7;
+
+  --primary-font-family: "Mukta", sans-serif;
+  --secondary-font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: var(--color-secondary);
+}
+p {
+  font-family: var(--secondary-font-family);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary-font-family);
+}
